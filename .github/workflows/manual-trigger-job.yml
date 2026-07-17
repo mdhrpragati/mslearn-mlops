@@ -16,6 +16,6 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Run Azure Machine Learning training job
-      run: az ml job create -f src/job.yml --stream --resource-group rg-ai300-le871a307910e43ba92 --workspace-name mlw-ai300-le871a307910e43ba92
+      run: az ml job create -f src/job.yml --stream --resource-group $AZURE_RESOURCE_GROUP --workspace-name $AZURE_WORKSPACE_NAME
 
 
